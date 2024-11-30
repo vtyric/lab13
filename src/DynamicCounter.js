@@ -34,7 +34,7 @@ function DynamicCounter() {
             const response = await fetch('https://api.quotable.io/random');
             if (!response.ok) throw new Error('Ошибка при загрузке цитаты');
             const data = await response.json();
-            setQuote(data.content); // Текст цитаты
+            setQuote(data.content);
         } catch (error) {
             setQuote('Не удалось загрузить цитату. Попробуйте позже.');
         } finally {
